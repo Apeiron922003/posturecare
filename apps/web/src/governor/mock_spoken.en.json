@@ -1,0 +1,12 @@
+{
+  "critically_close": "Move a bit farther from the screen.",
+  "too_close": "Sit about an arm's length from the screen.",
+  "too_far": "Sit a little closer to the screen.",
+  "head_too_low": "Lift your head so your eyes meet the screen.",
+  "head_too_high": "Lower your chin slightly and look at the screen.",
+  "head_tilted": "Keep your head level, ears even.",
+  "head_turned": "Turn your face toward the screen.",
+  "low_blink_rate": "Blink a few times and look away from the screen.",
+  "break": "You have been sitting a while. Stand and take a short break.",
+  "escalate": "Posture is still off. Acknowledge to keep monitoring."
+}

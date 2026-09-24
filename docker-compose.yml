@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: posturecare
+      POSTGRES_PASSWORD: posturecare
+      POSTGRES_DB: posturecare
+    ports:
+      - "5432:5432"
+    volumes:
+      - posturecare_pg:/var/lib/postgresql/data
+
+volumes:
+  posturecare_pg:

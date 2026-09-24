@@ -1,0 +1,12 @@
+{
+  "critically_close": "Ngồi xa màn hình hơn một chút.",
+  "too_close": "Lùi ra khoảng một cánh tay so với màn hình.",
+  "too_far": "Ngồi gần màn hình hơn một chút.",
+  "head_too_low": "Ngẩng đầu, mắt ngang màn hình.",
+  "head_too_high": "Hạ cằm nhẹ, nhìn thẳng màn hình.",
+  "head_tilted": "Giữ đầu thẳng, hai tai ngang nhau.",
+  "head_turned": "Quay mặt về phía màn hình.",
+  "low_blink_rate": "Chớp mắt vài lần, nhìn ra xa màn hình.",
+  "break": "Đã ngồi khá lâu. Đứng dậy nghỉ một chút.",
+  "escalate": "Vẫn lệch tư thế. Xác nhận để tiếp tục theo dõi."
+}

@@ -1,0 +1,5 @@
+# Cloudflare Pages project config for apps/web.
+# Deploy with: npm run build && npx wrangler pages deploy dist
+name = "posturecare-web"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-09-15"

@@ -1,0 +1,2 @@
+# /api/* is proxied by functions/api/[[path]].ts instead — Pages Functions can
+# reach an external origin (Fly.io), a plain `_redirects` 200 rewrite cannot.
