@@ -132,8 +132,8 @@ Quảng cáo (V2 trong SRS): **không khuyến nghị** — giảm lòng tin v�
 
 | # | Trạng thái | Chi tiết |
 |---|---|---|
-| B1 | Code sẵn, **chờ connection string Supabase** | `apps/api/db.py`: nhận `postgres://`/`postgresql://` của Supabase, tự dùng driver psycopg 3; pooler `:6543` tắt prepared statements; host không phải local → `sslmode=require` |
-| B2 | Xong (migrations); backup chưa | Alembic `apps/api/migrations/`, chạy tự động khi API khởi động (`migrate.py`); DB cũ tạo bằng `create_all` được stamp `0001`. Test trên SQLite (máy dev không có Docker). **Chưa chạy trên Postgres thật.** Backup: kiểm gói Supabase đang dùng có backup hằng ngày không |
+| B1 | **Xong, đang chạy production** (2026-09-24) — Fly `DATABASE_URL` → Supabase (kết nối trực tiếp `db.<ref>.supabase.co:5432`, IPv6). Mật khẩu có ký tự đặc biệt phải URL-encode (`@` → `%40`) | `apps/api/db.py`: nhận `postgres://`/`postgresql://` của Supabase, tự dùng driver psycopg 3; pooler `:6543` tắt prepared statements; host không phải local → `sslmode=require` |
+| B2 | Xong, production ở revision `0003` (0002/0003 bật RLS cho mọi bảng `public` — Supabase mở `public` qua REST API cho anon key). Backup chưa kiểm | Alembic `apps/api/migrations/`, chạy tự động khi API khởi động (`migrate.py`); DB cũ tạo bằng `create_all` được stamp `0001`. Test trên SQLite (máy dev không có Docker). **Chưa chạy trên Postgres thật.** Backup: kiểm gói Supabase đang dùng có backup hằng ngày không |
 | B3 | Code một phần, chờ test tay | Thêm lỗi camera bận (`NotReadableError` → hướng dẫn đóng Zoom/Meet/OBS) và thiếu HTTPS; lỗi lạ hiện tên lỗi thay vì chuỗi thô. Checklist tay: từ chối quyền / không camera / camera bận / model lỗi, trên từng trình duyệt |
 | B4 | Chưa | Đo FPS thật — cần máy thật, không làm được từ đây |
 | B5 | Backend xong (tắt mặc định) | `observability.py`: bật khi có `SENTRY_DSN`; không PII, không body request, che `X-Device-Token`. Frontend chưa (thêm khi có DSN, cần cân nhắc +~30 KB bundle) |

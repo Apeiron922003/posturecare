@@ -39,7 +39,7 @@ def test_migrations_adopt_legacy_create_all_db(tmp_path):
     Base.metadata.create_all(engine)
     upgrade_to_head(engine)
     with engine.connect() as c:
-        assert c.execute(text("select version_num from alembic_version")).scalar() == "0001"
+        assert c.execute(text("select version_num from alembic_version")).scalar() == "0003"
 
 
 def test_sql_store_purge_readings(tmp_path):
